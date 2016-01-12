@@ -1,0 +1,49 @@
+<h1>Directory</h1>
+
+<div class="filter_div">
+	<div class="filter btn btn-default btn-directory active"><%= link_to "Full Listing", people_path %></div>
+	<div class="filter btn btn-default btn-directory active"><%= link_to "Faculty", people_path(:filter_by => :faculty), {:method => :get} %></div>
+	<div class="filter btn btn-default btn-directory active"><%= link_to "Postdocs", people_path(:filter_by => :postdoc), {:method => :get} %></div>
+	<div class="filter btn btn-default btn-directory active"><%= link_to "Grad Students", people_path(:filter_by => :'graduate student'), {:method => :get} %></div>
+	<div class="filter btn btn-default btn-directory active"><%= link_to "Affiliates", people_path(:filter_by => :affiliates), {:method => :get} %></div>
+	<div class="filter btn btn-default btn-directory active"><%= link_to "Staff", people_path(:filter_by => :staff), {:method => :get} %></div>
+
+</div>
+
+<table class="people table-striped">
+	
+	<tbody>
+		<% @people.each do |person| %>
+		  <tr class="people_row">
+		  	<td>
+		  		<div class="portrait">
+		  			<%= image_tag("#{person.user_name}S.jpg") %>
+		  		</div>
+		  	</td>
+		  	<td class="names">
+		  		<div class="inner">
+		  			<p><%= link_to(person) do %>
+  						<strong><%= person.fname %> <%= person.lname %></strong>
+					<% end %></p>
+		  			<p><%= person.title %></p>
+		  			<p><%= person.position.capitalize %></p>
+		  		</div>
+		  	</td>
+		  	<td class="stats">
+		  		<div class="inner">
+		  			<p><%= person.school %></p>
+		  			<p><%= person.building %> <%= person.office %></p>
+		  			<p><%= person.phone %></p>
+		  		</div>
+		  	</td>
+		  	<td class="mail">
+		  		<div class="inner">
+		  			<%= person.user_name %>@neuro.fsu.edu
+		  		</div>
+		  	</td>
+		  </tr>
+		<% end %>
+	</tbody>
+</table>
+
+

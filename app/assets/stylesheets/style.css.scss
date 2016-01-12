@@ -1,0 +1,699 @@
+  // Example of how to use these rad responsive variables
+
+//@include size(xs) { /* Words */ }
+//@include size(sm) { /* Words */ }
+//@include size(md) { /* Words */ }
+//@include size(lg) { /* Words */ }
+//@include size(xlu) { /* Words */ }
+@mixin size($media) {
+  // These variables are for styles needed ONLY within these widths
+  @if $media == xs {
+    @media only screen and (max-width: 479px) { @content; }
+  }
+  @else if $media == sm {
+    @media only screen and (min-width: 480px) and (max-width: 767px) { @content; }
+  }
+  @else if $media == md {
+    @media only screen and (min-width: 768px) and (max-width: 991px) { @content; }
+  }
+  @else if $media == lg {
+    @media only screen and (min-width: 992px) and (max-width: 1199px) { @content; }
+  }
+
+    // These variables are for styles needed in their min-widths and everything above it
+  @else if $media == smu {
+    @media only screen and (min-width: 480px) { @content; }
+  }
+  @else if $media == mdu {
+    @media only screen and (min-width: 768px) { @content; }
+  }
+  @else if $media == lgu {
+    @media only screen and (min-width: 992px) { @content; }
+  }
+  @else if $media == xlu {
+    @media only screen and (min-width: 1200px) { @content; }
+  }
+
+    // Special media query for only for mobile break point
+  @else if $media == mb {
+    @media only screen and (max-width: 767px) { @content; }
+  }
+
+}
+
+
+
+  body {
+    margin: 0;
+    font-size: 14px;
+    font-family: "Roboto",sans-serif;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Header CSS */
+
+  header {
+    background: #782f40;
+  }
+  header .container {
+    color: #cdbc88;
+    font-size: 19px;
+    position: relative;
+    text-align: right;
+    @include size(mdu) { 
+      font-size: 24px;
+    }
+  }
+  .container .inner {
+    padding-right: 60px;
+  }
+
+  .logo {
+    background: url("seal.png") no-repeat scroll 0 0 transparent;
+    background-size: 45px auto;
+    height: 45px;
+    position: absolute;
+    right: 0;
+    top: 3px;
+    width: 45px;
+    @include size(mdu) { 
+      background-size: 61px auto;
+      height: 61px;
+      width: 61px;
+    }
+  }
+
+  .page-header {
+    margin: 0;
+    border: none;
+    padding-bottom: 0;
+  }
+
+  .page-header a {
+  	background: url("neuro_banner_w.jpg") no-repeat scroll 0px 0 transparent;
+  	background-size: 100% auto;
+  	margin: 0;
+  	height: 64px;
+    border: none;
+    display: block;
+    @include size(mdu) { 
+      background-size: 966px auto;
+      background-position: 32px 0;
+    }
+  }
+
+  #main-menu {
+    background: none repeat scroll 0 0 #fff;
+    border: medium none;
+  }
+
+  #main-menu ul {
+
+  }
+
+  #main-menu ul li {
+
+  }
+
+  #main-menu ul li a {
+    padding: 5px 30px;
+  }
+
+  .navbar.navbar-default {
+    border: none;
+    background: none;
+    margin-bottom: 10px;
+    min-height: 0;
+  }
+
+  #main-menu .nav {
+    float: none;
+    margin: 0 auto;
+    @include size(md) {
+      width: 795px;
+    }
+  }
+
+
+  /* Home Page */
+
+  .home_show {
+    @include size(mdu) {
+      
+    }
+    @include size(lgu) {
+   
+    }
+    @include size(xlu) {
+      width: 1040px;
+    }
+  }
+
+  .carosel {
+    @include size(mdu) {
+      margin-top: 0px;
+      width: 590px;
+      float: left;
+      padding-left: 33px;
+    }
+    @include size(lgu) {
+      width: 782px;
+    }
+    @include size(xlu) {
+      width: 833px;
+    }
+    
+
+  }
+
+  .carosel_block {
+    width: 50%;
+    float: left;
+    margin-top: 12px;
+    @include size(mdu) {
+      width: 110px;
+      float: right;
+      margin-top: 0px;
+    }
+    @include size(lgu) {
+      width: 150px;
+    }
+    @include size(xlu) {
+      width: 193px;
+      padding-right: 33px;
+    }
+    img {
+      width: 100%;
+    }
+    
+  }
+
+  .gradapp {
+    a {
+      display: block;
+      padding-right: 5px;
+    }
+    @include size(mdu) {
+      a {
+        padding: 0px;
+      }
+    }
+  }
+
+  .outreach {
+    a {
+      display: block;
+      padding-left: 5px;
+    }
+    @include size(mdu) {
+      margin-top: 12px;
+      a {
+        padding: 0px;
+      }
+      
+    }
+    @include size(lgu) {
+    }
+    @include size(xlu) {
+    }
+    
+  }
+
+  /* Content Wrapper in Application.html.erb */
+
+  .content-wrapper h1 {
+
+  }
+
+  /* People */
+
+  .filter_div {
+    padding-bottom: 5px;
+  }
+
+  .filter {
+    border-radius: 8px;
+    padding: 3px 10px;
+  }
+
+  .people {
+    width: 100%
+  }
+
+  .people td {
+    padding: 5px;
+  }
+
+  .people td p {
+    margin-bottom: 5px;
+    line-height: 1.2;
+  }
+
+
+  .people .people_row {
+
+  }
+
+  .people .portrait {
+    background-color: #cccccc;
+    border-radius: 50%;
+    height: 62.5px;
+    overflow: hidden;
+    position: relative;
+    width: 62.5px;
+    display: block;
+    text-align: center;
+  }
+
+  .people .portrait img {
+    width: 50px;
+    height: auto;
+  }
+
+  .people .names {
+
+  }
+
+  .people .stats {
+    
+  }
+
+  .people .stats .inner {
+    padding-left: 15px;    
+  }
+
+  .people .mail {
+    text-align: center;
+  }
+
+
+    /* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+  clear:both;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+
+  /* Calendar */
+
+#calendar table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#calendar td,
+#calendar th {
+  font-family: "Lucida Grande",arial,helvetica,sans-serif;
+  font-size: 10px;
+  padding: 6px;
+  border: 1px solid #999;
+}
+
+#calendar th {
+  background: #DDD;
+  color: #666;
+  text-align: center;
+  width: 14.2857142857143%;
+}
+
+#calendar td {
+  background: #FFF;
+  color: #777;
+  height: 80px;
+  vertical-align: top;
+  font-size: 16px;
+}
+
+#calendar .notmonth {
+  color: #CCC;
+}
+
+#calendar #month {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+#calendar #month a, #calendar #month a:hover {
+  text-decoration: none;
+  padding: 0 10px;
+  color: #999;
+}
+
+#calendar .today {
+  background-color: #D7F2FF;
+}
+
+#calendar ul {
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+  list-style: none;
+}
+
+#calendar li {
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  text-align: center;
+}
+
+
+/* People Pages */
+
+
+    .profile {
+      img{
+        width: 100%;
+      }
+    }
+
+    .profile_desc {
+      dd{
+        margin-bottom: 10px;
+      }
+      ul {
+        padding: 0;
+      }
+    }
+
+    .profile_info {
+
+    }
+
+
+/* Hub Pages */
+
+
+    .hub_wrap {
+      width:800px;
+      margin:0 auto;
+        
+    }
+
+    #hub_text {
+        .hub_header_image {
+          text-align: center;
+        }
+        .hub_para {
+          @include size(mdu) {
+           }
+          @include size(lgu) {
+            padding: 0px 80px;
+           }
+          @include size(xlu) {
+            padding: 0px 180px;
+           }
+        }
+    }
+
+    #hub_left {
+      a {
+          color: #fff;
+        display: block;
+        line-height: 1;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        height: 80px;
+        width: 380px;
+        line-height: 117px;
+        margin: 0 auto 5px;
+          &:hover, &:focus {
+            text-decoration: none;
+            color: #fff;
+            }
+        @include size(mdu) {
+          float: right;
+           }
+          }
+        ul {
+          padding: 0;
+          margin: 0;
+        }  
+    }
+    #hub_right {
+      a {
+          color: #fff;
+          display: block;
+          line-height: 1;
+          padding-bottom: 5px;
+          padding-left: 5px;
+          height: 80px;
+          width: 380px;
+          line-height: 117px;
+          margin: 0 auto 5px;
+          &:hover, &:focus {
+            text-decoration: none;
+            color: #fff;
+            }
+        @include size(mdu) {
+          float: left;
+
+           }
+          }
+        ul {
+          padding: 0;
+          margin: 0;
+        }  
+      
+    }
+
+
+  /* Link Image classes */
+
+
+    .cal_link {
+      background: url("cal_wo.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .out_link {
+      background: url("out_wo.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .life_link {
+      background: url("life_wo.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 23px;
+    }
+
+    .rush_link {
+      background: url("rush_wo.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .coll_link {
+      background: url("coll_wo.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .smith_link {
+      background: url("smith_wo.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .hist_link {
+      background: url("hist.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .focus_link {
+      background: url("focus.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .aff_link {
+      background: url("aff.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .ngsa_link {
+      background: url("ngsa.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .nusa_link {
+      background: url("nusa.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .trib_link {
+      background: url("trib.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .out_link {
+      background: url("out_wo.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .nsres_link {
+      background: url("nsres.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .gsac_link {
+      background: url("green.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .bylaw_link {
+      background: url("blue.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .const_link {
+      background: url("gold.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .genreq_link {
+      background: url("genreq.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 30px;
+    }
+
+    .apply_link {
+      background: url("apply.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .finaid_link {
+      background: url("finaid.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .curr_link {
+      background: url("curr.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .faq_link {
+      background: url("faq.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .mail_link {
+      background: url("mail.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .net_link {
+      background: url("net.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .photo_link {
+      background: url("photo.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .arts_link {
+      background: url("arts.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .cores_link {
+      background: url("cores.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .links_link {
+      background: url("links.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 29px;
+    }
+
+    .pdoc_link {
+      background: url("pdoc.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 30px;
+    }
+
+    .bfair_link {
+      background: url("green.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .aware_link {
+      background: url("blue.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .bbee_link {
+      background: url("gold.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .aff_bio_link {
+      background: url("aff_bio.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .aff_med_link {
+      background: url("aff_med.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .aff_psych_link {
+      background: url("aff_psych.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .aff_math_link {
+      background: url("aff_math.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .aff_mag_link {
+      background: url("aff_mag.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .aff_molbi_link {
+      background: url("aff_molbi.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+  /* The last thing I do */
+
+  .container {
+
+  }
+
+  .navbar-toggle {
+    float: left;
+  }
+

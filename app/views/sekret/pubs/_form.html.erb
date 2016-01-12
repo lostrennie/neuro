@@ -1,0 +1,61 @@
+<%= form_for(pub) do |f| %>
+
+	<fieldset>
+		<%= f.label :pubmed_id %>
+		<%= f.text_field :pubmed_id %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :person_id %>
+		<%= f.text_field :person_id %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :journal %>
+		<%= f.text_field :journal %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :auth_id %>
+		<%= f.text_area :auth_id %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :authors %>
+		<%= f.text_area :authors %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :pages %>
+		<%= f.text_field :pages %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :date %>
+		<%= f.text_field :date %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :type %>
+		<%= f.text_field :type %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :link %>
+		<%= f.text_field :link %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :notes %>
+		<%= f.text_area :notes %>
+	</fieldset>
+
+	
+
+	<%= f.submit %>
+<% end %>

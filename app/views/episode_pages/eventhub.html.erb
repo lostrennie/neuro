@@ -1,0 +1,28 @@
+<% provide(:title, "Events") %>
+
+
+
+
+<div class="row">
+	<div id="hub_text" class="col-sm-12">
+		<div class="hub_header_image">
+			<%= image_tag('events_b.jpg') %>
+		</div>
+		<h1> </h1>
+	</div>
+
+	<div id="hub_left" class="col-sm-6 clearfix">
+		<ul>
+			<li><%= link_to 'Calendar', 'https://psy.fsu.edu/calendar/index.pl?Op=ShowIt&CalendarName=BRF_conference_room', :class => 'cal_link' %></li>
+			<li><%= link_to 'Outreach', '/students_pages/outreach', :class => 'out_link' %></li>
+			<li><%= link_to 'Weekly Colloquium', '/episode_pages/colloquium', :class => 'coll_link' %></li>
+		</ul>
+	</div>
+	<div id="hub_right" class="col-sm-6 clearfix">
+		<ul>
+			<li><%= link_to 'Rushton Lectures', '/episode_pages/rushton', :class => 'rush_link' %></li>
+			<li><%= link_to 'Smith Lecture', '/episode_pages/smith', :class => 'smith_link' %></li>
+			<li><%= link_to 'Life Sciences Symposium', '#', :class => 'life_link' %></li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,31 @@
+<% provide(:title, "Article Details") %>
+<h1><%= @pub.title %></h1>
+<h2><%= @pub.authors %></h2>
+
+<dl>
+	<dt>title</dt>
+	<dd><%= @pub.title %></dd>
+
+	<dt>journal</dt>
+	<dd><%= @pub.journal %></dd>
+
+	<dt>authors</dt>
+	<dd><%= @pub.authors %></dd>
+
+	<dt>Pages</dt>
+	<dd><%= @pub.pages %></dd>
+
+	<dt>date</dt>
+	<dd><%= @pub.date %></dd>
+
+	<dt>link</dt>
+	<dd><%= @pub.link %></dd>
+
+	<dt>Notes</dt>
+	<dd><%= @pub.title %></dd>
+</dl>
+
+<div>
+	<%= link_to "Edit", edit_pub_path(@pub) %> |
+	<%= link_to "Show All", pubs_path %>
+</div>

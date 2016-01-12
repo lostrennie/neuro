@@ -1,0 +1,2 @@
+module Sekret::PeopleHelper
+end

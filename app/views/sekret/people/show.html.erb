@@ -1,0 +1,86 @@
+<%= provide(:title,  @person.lname) %>
+
+
+
+<div id="main_con" class="container">
+
+<div class="row">
+
+	<div>
+		<!-- # Space for accepting student text -->
+	</div>
+
+   <div id="person_left" class="col-sm-6 col-md-7">
+   	   <div class="profile">
+   		<%= image_tag("#{@person.user_name}.jpg") %>
+   	   </div>
+   </div>
+   
+   <p> </p>
+
+   <div id="person_right" class="col-sm-6 col-md-5 profile_info">
+   		<h2><%= @person.prefix %> <%= @person.fname %> <%= @person.lname %></h2>
+		<h4><%= @person.title %></h4>
+		<dl>
+			<dd><%= @person.position.capitalize %></dd>
+			<dd><%= @person.school %></dd>
+			<dd><%= @person.building %> <%= @person.office %></dd>
+			<dd><%= @person.phone %></dd>
+			<dd><%= @person.user_name %></dd>
+		</dl>
+   </div>
+  </div>
+
+  <div class="row">
+  		<div class="col-sm-6 profile_desc">
+  			<p> </p>
+  			<dl>
+				<dt>Interest</dt>
+				<dd><%= @person.interest %></dd>
+
+				<dt>Current Reseach</dt>
+				<dd><%= @person.research %></dd>
+
+				<dt>Recent Publications</dt>
+				<dd>
+					<table class="table-striped">
+		  				<tbody>
+		  					<% @person.pubs.each do |pub| %>
+									<tr>
+										<td><%= pub.authors %>, <%= pub.title %>, <%= pub.journal %>, <%= pub.date %> </td> </tr>
+									<% end %>
+		  				</tbody>
+		  			</table>
+  					<%= link_to 'Add new Publication', new_sekret_person_pub_path(@person) %>
+
+				</dd>
+
+				
+			</dl>
+
+  		</div>
+
+  		<div class="col-sm-6">
+  			<!--Lab Links and people go here. -->
+  		</div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

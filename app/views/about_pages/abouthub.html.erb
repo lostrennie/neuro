@@ -1,0 +1,19 @@
+<% provide(:title, "About") %>
+
+<div class="row">
+	<div id="hub_text" class="col-sm-12">
+		<div class="hub_header_image">
+			<%= image_tag ('about_b.jpg') %>
+		</div>
+		<h2 class="hub_para">Overview of the Program in Neuroscience</h2>
+		<p class="hub_para">The Program in Neuroscience at Florida State University is an interdisciplinary research and graduate training program, offering a Ph.D. in Neuroscience. The Program is made up of 40+ graduate students working with more than 30 core faculty from 4 departments at FSU. The Program's objective is to promote interdisciplinary basic research into neural processes, including the biological mechanisms underlying behavior, sensation, motivation and neurological disorders, and to provide advanced graduate training leading to the Ph.D. degree in Neuroscience.</p>
+	</div>
+
+	<div id="hub_left" class="col-sm-6 clearfix">
+		<ul>
+			<li><%= link_to 'History', '/about_pages/history', :class => 'hist_link' %></li>
+			<li><%= link_to 'Focus', '/about_pages/focus', :class => 'focus_link' %></li>
+			<li><%= link_to 'Affliates', '/about_pages/affliates', :class => 'aff_link' %></li>
+		</ul>
+	</div>
+</div>

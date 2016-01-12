@@ -1,0 +1,37 @@
+<% provide(:title, "Home") %>
+
+
+<%= stylesheet_link_tag "flexslider.css", media: "all", "data-turbolinks-track" => true %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<%= javascript_include_tag "jquery.flexslider.js", "data-turbolinks-track" => true %>
+
+
+<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider({
+    	animation: "slide"
+    });
+  });
+</script>
+
+
+<div class="home_show clearfix">
+	<div class="flexslider carosel">
+		  <ul class="slides">
+		    <li>
+		      <%= image_tag('carousel_1.jpg') %>
+		    </li>
+		    <li>
+		      <%= image_tag('carousel_2.jpg') %>
+		    </li>
+		    <li>
+		      <%= image_tag('carousel_3.jpg') %>
+		    </li>
+		  </ul>
+		</div>
+	<div class="carosel_block gradapp"><%= link_to image_tag('grad_app.gif'), '/prospect_pages/admission' %></div>
+	<div class="carosel_block outreach"><%= link_to image_tag('outreach.gif'), '/students_pages/outreach' %></div>
+</div>
+
+	
+		

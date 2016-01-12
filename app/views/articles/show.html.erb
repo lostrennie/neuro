@@ -1,0 +1,30 @@
+<% provide(:title, "Article Details") %>
+<h1><%= @article.title %></h1>
+<h2><%= @article.authors %></h2>
+
+<dl>
+	<dt>title</dt>
+	<dd><%= @article.title %></dd>
+
+	<dt>journal</dt>
+	<dd><%= @article.journal %></dd>
+
+	<dt>authors</dt>
+	<dd><%= @article.authors %></dd>
+
+	<dt>Pages</dt>
+	<dd><%= @article.pages %></dd>
+
+	<dt>date</dt>
+	<dd><%= @article.date %></dd>
+
+	<dt>link</dt>
+	<dd><%= @article.link %></dd>
+
+	<dt>Notes</dt>
+	<dd><%= @article.title %></dd>
+</dl>
+
+<div>
+	<%= link_to "Show All", article_path %>
+</div>

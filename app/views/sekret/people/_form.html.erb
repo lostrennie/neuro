@@ -1,0 +1,108 @@
+<%= form_for(person) do |f| %>
+	<fieldset>
+		<%= f.label :prefix %>
+		<%= f.text_field :prefix %>
+	</fieldset>
+	
+	<fieldset>
+		<%= f.label :First_Name %>
+		<%= f.text_field :fname %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :last_name %>
+		<%= f.text_field :lname %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :user_name %>
+		<%= f.text_field :user_name %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :author_name %>
+		<%= f.text_field :auth_id %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :school %>
+		<%= f.text_field :school %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :position %>
+		<%= f.select :position, ['faculty', 'staff', 'postdoc', 'graduate student', 'lab tech'] %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :building %>
+		<%= f.text_field :building %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :office %>
+		<%= f.text_field :office %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :phone %>
+		<%= f.text_field :phone %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :pi1 %>
+		<%= f.text_field :pi1 %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :pi2 %>
+		<%= f.text_field :pi2 %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :focus %>
+		<%= f.text_field :focus1 %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :focus %>
+		<%= f.text_field :focus2 %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :focus %>
+		<%= f.text_field :focus3 %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :boss %>
+		<%= f.text_field :boss %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :interest %>
+		<%= f.text_area :interest %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :research %>
+		<%= f.text_area :research %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :thumbnail %>
+		<%= f.file_field :thumbnail %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :banner %>
+		<%= f.file_field :banner %>
+	</fieldset>
+
+	<%= f.submit %>
+<% end %>

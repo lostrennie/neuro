@@ -1,0 +1,27 @@
+<% provide(:title, "Articles, Full List") %>
+<h1>List of Program Produced Articles</h1>
+
+<div>
+	<%= link_to "Create a new entry", new_pub_path %>
+</div>
+
+<table class="table-striped">
+	<tbody>
+		<% @pubs.each do |pub| %>
+		  <tr>
+		  	<div><td><p><%= link_to(pub) do %>
+  						<strong><%= pub.title %></strong>
+					<% end %></p></td></div>
+		  	<div>
+		  		<td><%= pub.authors %></td>
+		  	</div>
+		  	<div>
+		  		<td><%= pub.journal %></td>
+		  		<td><%= pub.pages %></td>
+		  		<td><%= pub.date %></td>
+		  		<td><%= pub.pubmed_id %></td>
+		  	</div>
+		  </tr>
+		<% end %>
+	</tbody>
+</table>
