@@ -22,7 +22,7 @@
 		  	</td>
 		  	<td class="names">
 		  		<div class="inner">
-		  			<p><%= link_to(person) do %>
+		  			<p><%= link_to(friendly_person_path(person.position, person.user_name)) do %>
   						<strong><%= person.fname %> <%= person.lname %></strong>
 					<% end %></p>
 		  			<p><%= person.title %></p>

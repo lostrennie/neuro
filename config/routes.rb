@@ -50,10 +50,12 @@ Rails.application.routes.draw do
   #get 'people/:id/user_name' => 'people#user_name', as: :user_name
   
   root to: 'homes#show'
-  
-  resources :people do
+
+  resources :people, except: [:show] do
       resources :pubs, except: [:create, :new, :edit, :destroy]
   end
+
+
 
   resources :articles
   resources :pubs
@@ -65,7 +67,10 @@ Rails.application.routes.draw do
     end
   end
 
- 
+  #last one!!!
+  get ':position/:user_name', to: 'people#show', as: 'friendly_person'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

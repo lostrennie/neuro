@@ -4,7 +4,5 @@ class Person < ActiveRecord::Base
 	has_many :archives
 	has_many :articles, :through => :archives
 
-  def to_param
-    user_name
-  end
+    validates_presence_of :user_name, :position # Needed for friendly URLs
 end

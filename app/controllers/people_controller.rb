@@ -12,7 +12,11 @@ class PeopleController < ApplicationController
 	end
 
 	def show
-    @person = Person.find_by_user_name(params[:id])
+		if params[:id]
+	    	@person = Person.find(params[:id])
+	    else
+	    	@person = Person.find_by(position: params[:position], user_name: params[:user_name])
+	    end
 	end
 
 	def new
@@ -24,7 +28,7 @@ class PeopleController < ApplicationController
 
 		if @person.save
 			flash[:notice] = "Person created successfully!"
-			redirect_to person_path(@person)
+			redirect_to friendly_person_path(@person.position, @person.user_name)
 		else
 			render :new, status: :unprocessable_entity
 		end
@@ -38,7 +42,7 @@ class PeopleController < ApplicationController
 		@person = Person.find(params[:id])
 
 		if @person.update(person_params)
-			redirect_to person_path(@person)
+			redirect_to friendly_person_path(@person.position, @person.user_name)
 		else
 			render :edit, status: :unprocessable_entity
 		end

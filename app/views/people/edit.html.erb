@@ -1,4 +1,4 @@
-<% provide(:title, "Edit: " @person.name) %>
+<% provide(:title, "Edit: " + @person.user_name) %>
 <h2>Edit Entity</h2>
 
 <%= render 'form', person: @person %>
