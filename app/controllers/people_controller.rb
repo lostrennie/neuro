@@ -13,7 +13,6 @@ class PeopleController < ApplicationController
 
 	def show
     @person = Person.find_by_user_name(params[:id])
-    @subordinates = Person.where('lower(boss) = ?', @person.user_name.downcase) # get all the subordinates for this @person
 	end
 
 	def new
