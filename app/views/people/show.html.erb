@@ -61,7 +61,20 @@
 
   		<div class="col-sm-6">
   			<!--Lab Links and people go here. -->
-          <h2>Lab Members</h2>
+  			<% if @person.subordinates.any? %>
+          		<h2>Lab Members</h2>
+          		<table>
+          		<% @person.subordinates.each do |sub| %>
+          				<tr>
+          					<td>
+          						<p><%= link_to(friendly_person_path(sub.position, sub.user_name)) do %>
+  									<strong><%= sub.fname %> <%= sub.lname %></strong>
+								<% end %></p>,<%= sub.title %>, <%= sub.position.capitalize %>
+          					</td>
+          				</tr>
+          			<% end %>
+          		</table>
+          	<% end %>
           
   		</div>
   </div>

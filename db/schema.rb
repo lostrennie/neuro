@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151207180639) do
+ActiveRecord::Schema.define(version: 20160113023132) do
 
   create_table "people", force: :cascade do |t|
     t.string   "fname",                  limit: 255
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20151207180639) do
     t.string   "phone",                  limit: 255
     t.string   "pi1",                    limit: 255
     t.string   "pi2",                    limit: 255
-    t.string   "boss",                   limit: 255
+    t.integer  "boss_id",                limit: 4
     t.text     "interest",               limit: 65535
     t.text     "research",               limit: 65535
     t.datetime "created_at"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 20151207180639) do
     t.string   "focus2",                 limit: 255
     t.string   "focus3",                 limit: 255
   end
+
+  add_index "people", ["boss_id"], name: "index_people_on_boss_id", using: :btree
 
   create_table "pubs", force: :cascade do |t|
     t.integer  "person_id",  limit: 4
