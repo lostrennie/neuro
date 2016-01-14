@@ -7,7 +7,11 @@
 <div class="row">
 
 	<div>
-		<!-- # Space for accepting student text -->
+		<% if @person.search.true? %>
+			<div>
+				<h3><%= @person.prefix %> <%= @person.fname %> <%= @person.lname %> is currently accepting new graduate students for the upcoming Fall semester.</h3>
+			</div>
+		<% end %>
 	</div>
 
    <div id="person_left" class="col-sm-6 col-md-7">

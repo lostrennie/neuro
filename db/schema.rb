@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160113023132) do
+=======
+ActiveRecord::Schema.define(version: 20160114161635) do
+>>>>>>> searchflag
 
   create_table "people", force: :cascade do |t|
     t.string   "fname",                  limit: 255
@@ -43,6 +47,7 @@ ActiveRecord::Schema.define(version: 20160113023132) do
     t.string   "focus1",                 limit: 255
     t.string   "focus2",                 limit: 255
     t.string   "focus3",                 limit: 255
+    t.boolean  "search",                 limit: 1
   end
 
   add_index "people", ["boss_id"], name: "index_people_on_boss_id", using: :btree
