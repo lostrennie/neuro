@@ -7,9 +7,9 @@
 <div class="row">
 
 	<div>
-		<% if @person.search.true? %>
+		<% if @person.search == true %>
 			<div>
-				<h3><%= @person.prefix %> <%= @person.fname %> <%= @person.lname %> is currently accepting new graduate students for the upcoming Fall semester.</h3>
+				<h4><%= @person.prefix %> <%= @person.fname %> <%= @person.lname %> is currently accepting new graduate students for the upcoming Fall semester.</h4>
 			</div>
 		<% end %>
 	</div>
@@ -73,7 +73,7 @@
           					<td>
           						<p><%= link_to(friendly_person_path(sub.position, sub.user_name)) do %>
   									<strong><%= sub.fname %> <%= sub.lname %></strong>
-								<% end %></p>,<%= sub.title %>, <%= sub.position.capitalize %>
+								<% end %></p>, <%= sub.position.capitalize %>
           					</td>
           				</tr>
           			<% end %>
