@@ -67,6 +67,10 @@ Rails.application.routes.draw do
     end
   end
 
+  get     '/sessions/new' => 'sessions#new',      as: :new_sessions
+  post    '/sessions'     => 'sessions#create',   as: :session 
+  delete  '/sessions'     => 'sessions#destroy'
+
   #last one!!!
   get ':position/:user_name', to: 'people#show', as: 'friendly_person'
 

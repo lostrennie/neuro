@@ -1,4 +1,5 @@
-class Sekret::PubsController < ApplicationController
+class Sekret::PubsController < SekretController
+	
 	def index
 		@pubs = Pub.all
 	end
