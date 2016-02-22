@@ -25,7 +25,12 @@
 		  			<p><%= link_to(friendly_person_path(person.position, person.user_name)) do %>
   						<strong><%= person.fname %> <%= person.lname %></strong>
 					<% end %></p>
-		  			<p><%= person.title %></p>
+					<% if person.boss.blank? %>
+							<p><%= person.title %></p>
+						<% else %>
+							<p><%= person.lab_name %> Lab</p>
+						<% end %>
+		  			
 		  			<p><%= person.position.capitalize %></p>
 		  		</div>
 		  	</td>

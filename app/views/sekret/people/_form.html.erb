@@ -36,7 +36,12 @@
 
 	<fieldset>
 		<%= f.label :position %>
-		<%= f.select :position, ['faculty', 'staff', 'postdoc', 'graduate student', 'lab tech'] %>
+		<%= f.select :position, ['faculty', 'staff', 'postdoc', 'grad', 'lab tech', 'affiliate'] %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label :lab_name %>
+		<%= f.text_field :lab_name %>
 	</fieldset>
 
 	<fieldset>
@@ -80,8 +85,8 @@
 	</fieldset>
 
 	<fieldset>
-		<%= f.label :boss %>
-		<%= f.text_field :boss %>
+		<%= f.label :boss_id %>
+		<%= f.text_field :boss_id %>
 	</fieldset>
 
 	<fieldset>
@@ -102,6 +107,11 @@
 	<fieldset>
 		<%= f.label :banner %>
 		<%= f.file_field :banner %>
+	</fieldset>
+
+	<fieldset>
+		<%= f.label "Accepting Students" %>
+		<%= f.check_box :search %>
 	</fieldset>
 
 	<%= f.submit %>
