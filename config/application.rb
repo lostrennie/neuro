@@ -22,5 +22,9 @@ module Neuro
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    Dir.glob("#{Rails.root}/app/assets/images/**/").each do |path|
+        config.assets.paths << path
+    end
   end
 end
