@@ -40,8 +40,13 @@
 	</fieldset>
 
 	<fieldset>
+		<%= f.label :boss_id %>
+		<%= f.select :boss_id, [["D Fadool", 1], ["Arbeitman", 2], ["Bertram", 3], ["Bhide", 4], ["Blaber", 5], ["Contreras", 7], ["Eckel", 8], ["J Fadool", 9], ["Hammock", 10], ["Houpt", 11], ["Hull", 12], ["Hyson", 13], ["Johnson", 14], ["Kabbaj", 15], ["Kumar", 16], ["Lee", 17], ["Levenson", 18], ["Li", 19], ["Lyons", 20], ["Megraw", 21], ["Meredith", 22], ["Nowakowski", 23], ["Oclese", 24], ["Ren", 25], ["Spector", 26], ["Stanwood", 27], ["Trombley", 28], ["Y Wang", 29], ["Z Wang", 30], ["Williams", 31], ["Zhou", 32]] %>
+	</fieldset>
+
+	<fieldset>
 		<%= f.label :lab_name %>
-		<%= f.text_field :lab_name %>
+		<%= f.select :lab_name, ["D Fadool", "Arbeitman", "Bertram", "Bhide", "Blaber", "Contreras", "Eckel", "J Fadool", "Hammock", "Houpt", "Hull", "Hyson", "Johnson", "Kabbaj", "Kumar", "Lee", "Levenson", "Li", "Lyons", "Megraw", "Meredith", "Nowakowski", "Oclese", "Ren", "Spector", "Stanwood", "Trombley", "Y Wang", "Z Wang", "Williams", "Zhou"] %>
 	</fieldset>
 
 	<fieldset>
@@ -85,11 +90,6 @@
 	</fieldset>
 
 	<fieldset>
-		<%= f.label :boss_id %>
-		<%= f.text_field :boss_id %>
-	</fieldset>
-
-	<fieldset>
 		<%= f.label :interest %>
 		<%= f.text_area :interest %>
 	</fieldset>
@@ -97,16 +97,6 @@
 	<fieldset>
 		<%= f.label :research %>
 		<%= f.text_area :research %>
-	</fieldset>
-
-	<fieldset>
-		<%= f.label :thumbnail %>
-		<%= f.file_field :thumbnail %>
-	</fieldset>
-
-	<fieldset>
-		<%= f.label :banner %>
-		<%= f.file_field :banner %>
 	</fieldset>
 
 	<fieldset>

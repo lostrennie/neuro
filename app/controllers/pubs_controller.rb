@@ -19,7 +19,7 @@ class PubsController < ApplicationController
 
 		if @pub.save
 			flash[:notice] = "Article created successfully!"
-			redirect_to pub_path(@pub)
+			redirect_to sekret_person_pub_path(@pub)
 		else
 			render :new, status: :unprocessable_entity
 		end
@@ -33,7 +33,7 @@ class PubsController < ApplicationController
 		@pub = Pub.find(params[:id])
 
 		if @pub.update(pub_params)
-			redirect_to pub_path(@pub)
+			redirect_to sekret_person_pub_path(@pub)
 		else
 			render :edit, status: :unprocessable_entity
 		end
@@ -42,7 +42,7 @@ class PubsController < ApplicationController
 	def destroy
 		pub = Pub.find(params[:id])
 		pub.destroy
-		redirect_to people_path
+		redirect_to sekret_people_path
 	end
 
 

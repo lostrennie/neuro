@@ -47,7 +47,6 @@ Rails.application.routes.draw do
   get "prospect_pages/prospecthub"
   get "prospect_pages/faq"
 
-  #get 'people/:id/user_name' => 'people#user_name', as: :user_name
   
   root to: 'homes#show'
 
@@ -58,7 +57,7 @@ Rails.application.routes.draw do
 
 
   resources :articles
-  resources :pubs
+  resources :pubs, except: [:create, :new, :edit, :destroy]
 
 
   namespace :sekret do

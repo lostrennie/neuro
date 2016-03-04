@@ -17,6 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails'
 
 # Use calendar plugin.
+gem 'googlecalendar'
 
 # Use Flexslider gem for frontpage carosel.
 gem 'flexslider'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160218212512) do
+ActiveRecord::Schema.define(version: 20160303150830) do
 
   create_table "people", force: :cascade do |t|
     t.string   "fname",                  limit: 255
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 20160218212512) do
     t.string   "auth_id",    limit: 255
     t.text     "authors",    limit: 65535
     t.string   "pages",      limit: 255
-    t.string   "date",       limit: 255
+    t.integer  "date",       limit: 4
     t.string   "type",       limit: 255
     t.string   "link",       limit: 255
     t.string   "notes",      limit: 255
