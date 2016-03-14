@@ -58,6 +58,13 @@
     height: auto;
   }
 
+  /* Flexslider */
+
+  .flexslider {
+    border: none;
+    background: none;
+  }
+
   /* Header CSS */
 
   header {
@@ -214,7 +221,7 @@
       padding-left: 5px;
     }
     @include size(mdu) {
-      margin-top: 12px;
+      margin-top: 26px;
       a {
         padding: 0px;
       }
@@ -257,6 +264,7 @@
     line-height: 1.2;
   }
 
+  
 
   .people .people_row {
 
@@ -294,6 +302,55 @@
     text-align: center;
   }
 
+    /* events */
+
+  #person_left {
+    float: left;
+    margin-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    img {
+      width: 120px;
+      height: auto;
+
+    }
+  }
+  #person_right {
+    float: left;
+
+  }
+
+  #person_left_show {
+    float: left;
+    margin-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  #person_right_show {
+    float: right;
+
+  }
+
+    // students
+
+  .council{
+    li {
+      padding: 10px 0px;
+
+    }
+    h5 {
+      color: #909090;
+      font-size: 14px;
+    }
+    .image {
+      float: left;
+      margin-right: 8px;
+    }
+    .body {
+      float: left;
+    }
+  }
 
     /* footer */
 
@@ -539,7 +596,7 @@ footer ul li {
 
     .coll_link {
       background: url("coll_wo.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
-      font-size: 32px;
+      font-size: 30px;
     }
 
     .smith_link {
@@ -588,17 +645,17 @@ footer ul li {
     }
 
     .gsac_link {
-      background: url("green.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      background: url("gsac.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
       font-size: 32px;
     }
 
     .bylaw_link {
-      background: url("blue.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      background: url("bilaws.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
       font-size: 32px;
     }
 
     .const_link {
-      background: url("gold.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      background: url("conts.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
       font-size: 32px;
     }
 
@@ -624,6 +681,16 @@ footer ul li {
 
     .faq_link {
       background: url("faq.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .tgrant_link {
+      background: url("tgrant.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 32px;
+    }
+
+    .stgrant_link {
+      background: url("stgrant.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
       font-size: 32px;
     }
 
@@ -663,17 +730,17 @@ footer ul li {
     }
 
     .bfair_link {
-      background: url("green.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      background: url("bfair.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
       font-size: 32px;
     }
 
     .aware_link {
-      background: url("blue.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
-      font-size: 32px;
+      background: url("baware.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 28px;
     }
 
     .bbee_link {
-      background: url("gold.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      background: url("bbee.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
       font-size: 32px;
     }
 

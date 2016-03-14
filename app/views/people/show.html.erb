@@ -14,15 +14,15 @@
 		<% end %>
 	</div>
 
-   <div id="person_left" class="col-sm-6 col-md-7">
+   <div id="person_left_show" class="col-sm-6 col-md-7">
    	   <div class="profile">
-   		<%= image_tag("#{@person.user_name}.jpg") %>
+   		   <%= image_tag("#{@person.user_name}.jpg") %>
    	   </div>
    </div>
    
    <p> </p>
 
-   <div id="person_right" class="col-sm-6 col-md-5 profile_info">
+   <div id="person_right_show" class="col-sm-6 col-md-5 profile_info">
    		<h2><%= @person.prefix %> <%= @person.fname %> <%= @person.lname %></h2>
 		<h4><%= @person.title %></h4>
 		<dl>

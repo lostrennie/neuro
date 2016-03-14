@@ -12,8 +12,8 @@
 
  *= require bootstrap
  *= require bootstrap_extensions
+ *= require flexslider
  *= require_self
  *= require style
- *= require flexslider
  */
 
