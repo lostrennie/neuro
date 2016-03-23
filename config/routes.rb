@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get "episode_pages/social"
   get "episode_pages/colloquium"
 
+  get "episode_pages/rushton_reg"
+  get "episode_pages/rushton2016"
+
   get "resource_pages/resourcehub"
   get "resource_pages/resresource"
   get "resource_pages/links"
@@ -50,7 +53,7 @@ Rails.application.routes.draw do
   
   root to: 'homes#show'
 
-  resources :people, except: [:show] do
+  resources :people, only: [:index, :show] do
       resources :pubs, except: [:create, :new, :edit, :destroy]
   end
 

@@ -305,8 +305,6 @@
     /* events */
 
   #person_left {
-    float: left;
-    margin-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
     img {
@@ -321,14 +319,12 @@
   }
 
   #person_left_show {
-    float: left;
-    margin-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
   }
 
   #person_right_show {
-    float: right;
+    
 
   }
 
@@ -671,7 +667,7 @@ footer ul li {
 
     .finaid_link {
       background: url("finaid.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
-      font-size: 32px;
+      font-size: 26px;
     }
 
     .curr_link {
@@ -684,13 +680,13 @@ footer ul li {
       font-size: 32px;
     }
 
-    .tgrant_link {
-      background: url("tgrant.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
-      font-size: 32px;
+    .sbook_link {
+      background: url("sbook.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+      font-size: 22px;
     }
 
-    .stgrant_link {
-      background: url("stgrant.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    .appnow_link {
+      background: url("appnow.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
       font-size: 32px;
     }
 
@@ -726,7 +722,7 @@ footer ul li {
 
     .pdoc_link {
       background: url("pdoc.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
-      font-size: 30px;
+      font-size: 29px;
     }
 
     .bfair_link {

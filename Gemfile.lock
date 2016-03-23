@@ -96,6 +96,8 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    quiet_assets (1.1.0)
+      railties (>= 3.1, < 5.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -168,6 +170,7 @@ DEPENDENCIES
   jquery-ui-rails
   mysql2 (~> 0.3.18)
   paperclip (~> 4.3.0)
+  quiet_assets
   rails (= 4.2.0)
   sass-rails
   sdoc
